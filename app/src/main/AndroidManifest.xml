@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.beamngguidebeamng.playbeamng">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- optional -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- optional -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- optional -->
+    <uses-permission android:name="android.permission.VIBRATE" /> <!-- optional -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- partially optional -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.BeamngDriveGuide"
+        tools:ignore="UnusedAttribute">
+        <activity
+            android:name=".start_guide.TrackShape"
+            android:exported="false" />
+        <activity
+            android:name=".start_guide.Bezier"
+            android:exported="false" />
+        <activity
+            android:name=".start_guide.AddingPieces"
+            android:exported="false" />
+        <activity
+            android:name=".start_guide.AdvancedPieces"
+            android:exported="false" />
+        <activity
+            android:name=".start_guide.Interpolations"
+            android:exported="false" />
+        <activity
+            android:name=".start_guide.StartGuide"
+            android:exported="false" />
+        <activity
+            android:name=".settings.Height"
+            android:exported="false" />
+        <activity
+            android:name=".settings.Width"
+            android:exported="false" />
+        <activity
+            android:name=".settings.Banking"
+            android:exported="false" />
+        <activity
+            android:name=".settings.AdditionalFunctionality"
+            android:exported="false" />
+        <activity
+            android:name=".settings.Driving_and_Testing"
+            android:exported="false" />
+        <activity
+            android:name=".settings.Settings"
+            android:exported="false" />
+        <activity
+            android:name=".main.Selecing_Pieces"
+            android:exported="false" />
+        <activity
+            android:name=".main.Basic_Concepts"
+            android:exported="false" />
+        <activity
+            android:name=".main.Overview"
+            android:exported="false" />
+        <activity
+            android:name=".main.GettingStarted"
+            android:exported="false" />
+        <activity
+            android:name=".main.Main"
+            android:exported="false" />
+        <activity
+            android:name=".main.TrackBuilder"
+            android:exported="false" />
+        <activity
+            android:name=".activity.Subcategories"
+            android:exported="false" />
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-1111111111111111~1111111111" />
+
+        <activity
+            android:name=".splash.SplashScreen"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
